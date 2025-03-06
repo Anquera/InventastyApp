@@ -1,24 +1,22 @@
-import {SafeAreaView, ScrollView, StatusBar, Text, TouchableOpacity, View} from "react-native";
-import {useRouter} from "expo-router";
-//import logo from "../assets/images/react-logo.png";
-
-//const logo = require("../assets/images/react-logo.png");
+import { useEffect } from "react";
+import { useRouter } from "expo-router";
+import { auth } from "../config/firebase.Config";  // Adjust the path to your Firebase config
+import { onAuthStateChanged } from "firebase/auth";
 
 export default function Index() {
     const router = useRouter();
-  return (
-   <SafeAreaView>
-       <StatusBar barStyle="light-content" />
-       <ScrollView contentContainerStyle={{height: "100%"}}>
-           <View className='m-2 flex justify-center items-center' >
-               <Text>Welcome to InvenTasty!</Text>
-               <View>
-                   <TouchableOpacity onPress={()=>router.push("/home")} className="p-2 my-2">
-                       <Text className="text-lg font-semibold text-center">Sign In as guest user</Text>
-                   </TouchableOpacity>
-               </View>
-           </View>
-       </ScrollView>
-   </SafeAreaView>
-  );
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                router.replace("/(tabs)/home");  // Navigate to the tabs layout after sign-in
+            } else {
+                router.replace("/(auth)/signin");  // Redirect to sign-in if not authenticated
+            }
+        });
+
+        return () => unsubscribe();
+    }, [router]);
+
+    return null;  // No UI is rendered, just redirects
 }
