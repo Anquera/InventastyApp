@@ -29,6 +29,7 @@ const SignIn = () => {
 
     return (
         <View style={{ flex: 1, justifyContent: "center", padding: 20 }}>
+           <Text>Inventasty</Text>
             <Text>Sign In</Text>
 
             <TextInput
