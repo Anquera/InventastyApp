@@ -6,7 +6,7 @@ export default function RootLayout() {
             <Stack.Screen name="index" />
             <Stack.Screen name="(auth)/signin" />
             <Stack.Screen name="(auth)/signup" />
-            <Stack.Screen name="(tabs)" /> {/* Use (tabs) to route to the tab layout */}
+            <Stack.Screen name="(tabs)" />
         </Stack>
     );
 }
