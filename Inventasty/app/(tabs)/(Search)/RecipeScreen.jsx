@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, Image, FlatList, StyleSheet, ActivityIndicator, ScrollView } from 'react-native';
-import { db } from './firebaseConfig'; // Firestore initialization file
+import { db } from './firebase.Config'; // Firestore initialization file
 import { collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore';
 
 const RecipeScreen = ({ route }) => {
