@@ -1,0 +1,24 @@
+[
+  { "name": "Spaghetti Bolognese", "category": "dinner" },
+  { "name": "Avocado Toast", "category": "breakfast" },
+
+  { "name": "Pancakes with Maple Syrup", "category": "breakfast" },
+  { "name": "Omelette with Veggies", "category": "breakfast" },
+  { "name": "Banana Smoothie Bowl", "category": "breakfast" },
+  { "name": "Breakfast Burrito", "category": "breakfast" },
+
+  { "name": "Grilled Chicken Sandwich", "category": "lunch" },
+  { "name": "Quinoa Salad with Feta", "category": "lunch" },
+  { "name": "Tomato Basil Soup", "category": "lunch" },
+  { "name": "Turkey Wrap", "category": "lunch" },
+
+  { "name": "Chicken Alfredo", "category": "dinner" },
+  { "name": "Beef Tacos", "category": "dinner" },
+  { "name": "Vegetable Stir Fry", "category": "dinner" },
+  { "name": "Stuffed Bell Peppers", "category": "dinner" },
+
+  { "name": "Chocolate Chip Cookies", "category": "dessert" },
+  { "name": "Strawberry Shortcake", "category": "dessert" },
+  { "name": "Lemon Tart", "category": "dessert" },
+  { "name": "Brownies", "category": "dessert" }
+]
