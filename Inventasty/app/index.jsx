@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "expo-router";
-import { auth } from "../config/firebase.Config";  // Adjust the path to your Firebase config
+import { auth } from "../config/firebase.Config";
 import { onAuthStateChanged } from "firebase/auth";
 
 export default function Index() {
@@ -9,14 +9,14 @@ export default function Index() {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
-                router.replace("/(tabs)/home");  // Navigate to the tabs layout after sign-in
+                router.replace("./(tabs)/search/AllRecipesScreen");  // Ensure this matches your first screen
             } else {
-                router.replace("/(auth)/signin");  // Redirect to sign-in if not authenticated
+                router.replace("./(auth)/signin");
             }
         });
 
         return () => unsubscribe();
     }, [router]);
 
-    return null;  // No UI is rendered, just redirects
+    return null;  
 }
