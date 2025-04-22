@@ -5,13 +5,18 @@ import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
 
 // Your Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAKupPOS4lyXogqEBfcJuJtJ8gxvYyNVys",
-    authDomain: "inventastyfirebase.firebaseapp.com",
-    projectId: "inventastyfirebase",
-    storageBucket: "inventastyfirebase.firebasestorage.app",
-    messagingSenderId: "108828346599",
-    appId: "1:108828346599:web:d607298448b4f6006f3a42",
-    measurementId: "G-CS4M051CEY"
+    firebase: {
+        apiKey: "AIzaSyAKupPOS4lyXogqEBfcJuJtJ8gxvYyNVys",
+        authDomain: "inventastyfirebase.firebaseapp.com",
+        projectId: "inventastyfirebase",
+        storageBucket: "inventastyfirebase.firebasestorage.app",
+        messagingSenderId: "108828346599",
+        appId: "1:108828346599:web:d607298448b4f6006f3a42",
+        measurementId: "G-CS4M051CEY"
+    },
+    gemini: {
+        apiKey: AIzaSyA0joc2NAQ8PeilsJIbfMfbfGNs_7jUzTk
+    }
 };
 
 // Initialize Firebase (this should be done once)

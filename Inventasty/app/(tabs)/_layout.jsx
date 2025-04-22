@@ -10,7 +10,7 @@ export default function TabLayout() {
             }}
         >
             <Tabs.Screen
-                name="search/AllRecipesScreen"
+                name="search/AllRecipeScreen"
                 options={{
                     title: "Search",
                     tabBarIcon: ({ color }) => <Ionicons name="search" size={24} color={color} />,
